@@ -5,7 +5,7 @@ const fetchMyIP = function(callback) {
   request('https://api.ipify.org?format=json', function (error, response, body) {
 
     if (error) {
-      callback(`Error: IP couldn't be obtained`);
+      callback(error, null);
       return;
     }
 
